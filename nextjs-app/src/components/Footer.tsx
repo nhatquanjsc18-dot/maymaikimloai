@@ -12,7 +12,7 @@ export function Footer() {
     .slice(0, 6);
 
   return (
-    <footer className="ft">
+    <footer className="sitefoot">
       <div className="wrap">
         <div className="cols">
           <div>
