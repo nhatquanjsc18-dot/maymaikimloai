@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Máy mài kim loại — chọn theo dải vòng quay | Catalog Dynabrade</title>
+<meta name="description" content="Catalog 703 model máy mài kim loại khí nén Dynabrade có thông số vòng quay. Lọc theo dải RPM và công suất để chọn đúng máy cho việc mài, cắt, đánh ba via.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Be+Vietnam+Pro:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   MÁY MÀI KIM LOẠI — hướng thiết kế "thước đo"
+   stock  #E6E9E8  giấy catalog xám lạnh
+   ink    #14181A  đen bản in
+   petrol #0B5C66  xanh thân máy Dynabrade — màu cấu trúc
+   cyan   #23B6C2  trạng thái đang chọn
+   amber  #FF7A18  chỉ dành cho hành động
+   grit   #8E9A9B  kẻ chỉ, chú thích
+   ============================================================ */
+:root{
+  --stock:#E6E9E8; --paper:#F7F8F8; --ink:#14181A; --ink-70:#4A5254;
+  --petrol:#0B5C66; --petrol-dk:#073E45; --cyan:#23B6C2; --amber:#FF7A18;
+  --grit:#8E9A9B; --hair:#C3CBCA;
+  --disp:"Archivo",system-ui,sans-serif;
+  --body:"Be Vietnam Pro",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --gut:clamp(16px,3vw,34px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--stock);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.62;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+.d{font-family:var(--disp);font-variation-settings:"wdth" 118,"wght" 800;text-transform:uppercase;line-height:.92;letter-spacing:-.005em}
+.m{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.shell{max-width:1420px;margin:0 auto;padding:0 var(--gut)}
+
+/* ---------- nameplate header ---------- */
+.top{background:var(--ink);color:#B9C3C3;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em}
+.top .shell{display:flex;justify-content:space-between;gap:16px;padding:7px var(--gut);flex-wrap:wrap}
+.top b{color:var(--cyan);font-weight:500}
+
+.head{background:var(--paper);border-bottom:1px solid var(--ink);position:sticky;top:0;z-index:60}
+.head .shell{display:flex;align-items:center;gap:clamp(14px,3vw,36px);padding-top:12px;padding-bottom:12px}
+.plate{display:flex;align-items:stretch;border:1.5px solid var(--ink);flex-shrink:0}
+.plate .sq{background:var(--petrol);width:38px;display:grid;place-items:center}
+.plate .sq svg{width:20px;height:20px}
+.plate .nm{padding:5px 12px 6px}
+.plate .nm b{display:block;font-family:var(--disp);font-variation-settings:"wdth" 112,"wght" 800;text-transform:uppercase;font-size:16px;line-height:1;letter-spacing:.01em}
+.plate .nm span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--grit);margin-top:3px}
+.nav{display:flex;gap:clamp(12px,2vw,26px);margin-left:auto;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.nav a{padding:4px 0;border-bottom:1.5px solid transparent}
+.nav a:hover,.nav a.on{border-bottom-color:var(--amber)}
+.act{background:var(--amber);color:var(--ink);border:1.5px solid var(--ink);padding:8px 16px;font-family:var(--mono);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;flex-shrink:0}
+.act:hover{background:var(--ink);color:var(--amber)}
+
+/* ---------- hero: the instrument ---------- */
+.hero{background:var(--paper);border-bottom:1px solid var(--ink);padding:clamp(30px,5vw,54px) 0 0}
+.hero .intro{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(20px,4vw,56px);align-items:end;padding-bottom:clamp(24px,4vw,40px)}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--petrol);display:block;margin-bottom:14px}
+.hero h1{margin:0;font-family:var(--disp);font-variation-settings:"wdth" 120,"wght" 800;text-transform:uppercase;font-size:clamp(38px,6.6vw,88px);line-height:.88;letter-spacing:-.015em}
+.hero h1 .sub{display:block;color:var(--petrol);font-variation-settings:"wdth" 108,"wght" 600;font-size:.46em;letter-spacing:.005em;margin-top:.22em;text-transform:none}
+.hero p{margin:0;color:var(--ink-70);font-size:clamp(14.5px,1.15vw,16.5px);max-width:46ch}
+.hero p b{color:var(--ink);font-weight:600}
+
+/* ---------- the ruler ---------- */
+.rule{padding-bottom:clamp(22px,3.5vw,34px)}
+.rule .cap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+.rule .cap h2{margin:0;font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grit);font-weight:500}
+.readout{font-family:var(--mono);font-size:clamp(15px,1.5vw,19px);font-weight:600}
+.readout i{font-style:normal;color:var(--petrol)}
+.readout em{font-style:normal;color:var(--grit);font-size:.72em;letter-spacing:.06em}
+
+.instrument{position:relative;border:1.5px solid var(--ink);background:#fff;padding:0 0 4px;user-select:none}
+.ticks{position:relative;height:86px;margin:0 26px}
+.ticks .t{position:absolute;bottom:0;width:1px;background:var(--hair);opacity:.5;transform-origin:bottom;transition:background .12s,opacity .12s}
+.ticks .t.in{background:var(--petrol)}
+.ticks .t.hot{background:var(--amber);width:2px;opacity:1}
+.scale{position:relative;height:30px;margin:0 26px;border-top:1.5px solid var(--ink)}
+.scale span{position:absolute;top:0;transform:translateX(-50%);font-family:var(--mono);font-size:10.5px;color:var(--ink-70);padding-top:6px;white-space:nowrap}
+.scale span::before{content:"";position:absolute;top:0;left:50%;width:1px;height:5px;background:var(--ink)}
+
+.track{position:relative;height:34px;margin:0 26px 6px}
+.track .bar{position:absolute;top:14px;left:0;right:0;height:4px;background:var(--hair)}
+.track .sel{position:absolute;top:14px;height:4px;background:var(--petrol)}
+.track input[type=range]{position:absolute;top:0;left:-13px;right:-13px;width:calc(100% + 26px);height:34px;margin:0;background:none;pointer-events:none;-webkit-appearance:none;appearance:none}
+.track input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;pointer-events:auto;width:22px;height:26px;background:var(--amber);border:1.5px solid var(--ink);cursor:ew-resize;margin-top:0}
+.track input[type=range]::-moz-range-thumb{pointer-events:auto;width:22px;height:26px;border-radius:0;background:var(--amber);border:1.5px solid var(--ink);cursor:ew-resize}
+
+/* category bands under the ruler */
+.bands{margin:0 26px;padding:12px 0 14px;border-top:1px dashed var(--hair);display:grid;gap:4px}
+.band{position:relative;height:19px;cursor:pointer}
+.band .fill{position:absolute;height:100%;background:rgba(11,92,102,.13);border-left:2px solid var(--petrol);border-right:1px solid rgba(11,92,102,.4)}
+.band .lb{position:absolute;top:2px;font-family:var(--mono);font-size:10.5px;letter-spacing:.02em;white-space:nowrap;color:var(--ink-70);padding-left:6px}
+.band:hover .fill,.band.on .fill{background:rgba(255,122,24,.22);border-left-color:var(--amber);border-right-color:var(--amber)}
+.band.on .lb{color:var(--ink);font-weight:600}
+
+.hint{margin:10px 26px 14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--grit)}
+
+/* ---------- catalog: index rail + grid ---------- */
+.cat{padding:clamp(30px,4vw,50px) 0}
+.cat .shell{display:grid;grid-template-columns:230px minmax(0,1fr);gap:clamp(20px,3vw,42px);align-items:start}
+.rail{position:sticky;top:78px;border-top:1.5px solid var(--ink)}
+.rail h3{margin:0;padding:9px 0;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--grit);font-weight:500;border-bottom:1px solid var(--hair)}
+.rail button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--hair);padding:9px 4px 9px 0;color:var(--ink)}
+.rail button:hover{background:rgba(11,92,102,.07)}
+.rail button.on{background:var(--ink);color:var(--paper);padding-left:8px}
+.rail button.on .c{color:var(--cyan)}
+.rail .l{display:block;font-size:13.5px;font-weight:500;line-height:1.3}
+.rail .c{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--grit);margin-top:2px}
+
+.gridhead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1.5px solid var(--ink);padding-bottom:9px;margin-bottom:18px}
+.gridhead h2{margin:0;font-family:var(--disp);font-variation-settings:"wdth" 116,"wght" 800;text-transform:uppercase;font-size:clamp(20px,2.2vw,28px);line-height:1}
+.gridhead .n{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink-70)}
+.sortbar{display:flex;gap:0;border:1px solid var(--hair);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase}
+.sortbar button{background:#fff;border:0;border-right:1px solid var(--hair);padding:6px 11px;color:var(--ink-70)}
+.sortbar button:last-child{border-right:0}
+.sortbar button.on{background:var(--petrol);color:#fff}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(216px,1fr));gap:14px}
+.item{background:#fff;border:1px solid var(--hair);display:flex;flex-direction:column;transition:border-color .12s}
+.item:hover{border-color:var(--amber)}
+.item .ph{position:relative;padding:14px;border-bottom:1px solid var(--hair)}
+.item .ph img{height:132px;object-fit:contain;margin:auto;mix-blend-mode:multiply}
+.item .ref{position:absolute;top:0;left:0;background:var(--petrol);color:#fff;font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;padding:3px 8px}
+.item:hover .ref{background:var(--amber);color:var(--ink)}
+.item .bd{padding:11px 12px 12px;display:flex;flex-direction:column;gap:7px;flex:1}
+.item .sc{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--grit)}
+.item h4{margin:0;font-size:13.5px;font-weight:500;line-height:1.34}
+.item .sp{font-family:var(--mono);font-size:11px;color:var(--petrol);letter-spacing:.02em}
+.item .ft{margin-top:auto;padding-top:9px;border-top:1px dashed var(--hair);display:flex;justify-content:space-between;align-items:baseline}
+.item .pr{font-family:var(--disp);font-variation-settings:"wdth" 110,"wght" 700;font-size:19px}
+.item .lk{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--petrol);border-bottom:1px solid var(--petrol)}
+.empty{border:1px dashed var(--grit);padding:34px;text-align:center;color:var(--ink-70)}
+.empty b{display:block;font-family:var(--disp);font-variation-settings:"wdth" 112,"wght" 700;text-transform:uppercase;font-size:19px;margin-bottom:6px;color:var(--ink)}
+.more{display:block;width:100%;margin-top:16px;background:none;border:1.5px solid var(--ink);padding:12px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.more:hover{background:var(--ink);color:var(--paper)}
+
+/* ---------- data sheet ---------- */
+.sheet{background:var(--ink);color:#D6DEDE;padding:clamp(34px,5vw,60px) 0}
+.sheet .shell{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(22px,4vw,50px);align-items:start}
+.sheet .kicker{color:var(--cyan)}
+.sheet h2{margin:0 0 10px;font-family:var(--disp);font-variation-settings:"wdth" 118,"wght" 800;text-transform:uppercase;font-size:clamp(26px,3.4vw,44px);line-height:.94;color:#fff}
+.sheet p{color:#95A2A3;margin:0 0 22px;max-width:44ch}
+.sheet .shot{background:#fff;border:1px solid var(--cyan);padding:20px;position:relative}
+.sheet .shot img{height:min(300px,42vw);object-fit:contain;margin:auto}
+.sheet .shot .tagref{position:absolute;left:-1px;bottom:-1px;background:var(--cyan);color:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:5px 10px;font-weight:600}
+.dt{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12.5px}
+.dt caption{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);padding-bottom:8px}
+.dt th{text-align:left;font-weight:400;color:#8E9A9B;padding:7px 12px 7px 0;border-bottom:1px solid #262C2E;width:47%;white-space:nowrap}
+.dt td{text-align:right;padding:7px 0;border-bottom:1px solid #262C2E;color:#fff;font-weight:500}
+.dt tr.key td{color:var(--cyan);font-size:14px}
+.sheet .note{font-family:var(--mono);font-size:10.5px;color:#6C7779;margin-top:12px;letter-spacing:.03em}
+
+/* ---------- editorial ---------- */
+.ed{padding:clamp(34px,5vw,58px) 0;background:var(--paper);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.ed .shell{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(20px,4vw,54px);align-items:start}
+.ed h2{margin:0;font-family:var(--disp);font-variation-settings:"wdth" 118,"wght" 800;text-transform:uppercase;font-size:clamp(26px,3.6vw,46px);line-height:.94}
+.ed .lede{color:var(--ink-70);margin:14px 0 0;font-size:16px}
+.ed article h3{font-family:var(--disp);font-variation-settings:"wdth" 110,"wght" 700;text-transform:uppercase;font-size:17px;margin:0 0 6px;letter-spacing:.01em}
+.ed article h3 span{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:.1em;text-transform:none;margin-right:8px}
+.ed article p{margin:0;color:var(--ink-70)}
+.ed article > div{padding:16px 0;border-top:1px solid var(--hair)}
+.ed article > div:first-child{border-top:1.5px solid var(--ink)}
+
+/* ---------- quote ---------- */
+.q{padding:clamp(34px,5vw,58px) 0}
+.q .shell{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border:1.5px solid var(--ink)}
+.q .l{background:var(--petrol);color:#fff;padding:clamp(22px,3vw,38px)}
+.q .l h2{margin:10px 0 12px;font-family:var(--disp);font-variation-settings:"wdth" 118,"wght" 800;text-transform:uppercase;font-size:clamp(24px,3vw,38px);line-height:.95}
+.q .l .kicker{color:#9BE2E9}
+.q .l p{margin:0 0 18px;color:#C4E4E7}
+.q .l ul{list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:12.5px}
+.q .l li{padding:8px 0;border-top:1px solid rgba(255,255,255,.22)}
+.q .r{background:var(--paper);padding:clamp(22px,3vw,38px)}
+.fld{margin-bottom:13px}
+.fld label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-70);margin-bottom:5px}
+.fld input,.fld select,.fld textarea{width:100%;padding:10px 12px;border:1px solid var(--ink);background:#fff;font-family:var(--body);font-size:14.5px;border-radius:0}
+.fld textarea{min-height:84px;resize:vertical}
+.q .r button{width:100%;margin-top:4px;padding:13px;font-size:13px}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:#8A9698;font-size:13px;padding:clamp(30px,4vw,48px) 0 0}
+.foot .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:clamp(18px,3vw,34px);padding-bottom:28px}
+.foot h5{margin:0 0 10px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:500}
+.foot a{display:block;padding:4px 0}
+.foot a:hover{color:var(--amber)}
+.foot .tel{font-family:var(--disp);font-variation-settings:"wdth" 112,"wght" 700;font-size:26px;color:#fff;margin-top:10px;display:block}
+.foot .legal{border-top:1px solid #262C2E;padding:14px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:#5F6A6C}
+
+/* ---------- load-in ---------- */
+@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.ticks .t{animation:rise .5s cubic-bezier(.2,.7,.3,1) both}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .ticks .t{animation:none}
+  *{transition-duration:.01ms !important}
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:1080px){
+  .hero .intro,.sheet .shell,.ed .shell,.q .shell{grid-template-columns:minmax(0,1fr)}
+  .cat .shell{grid-template-columns:minmax(0,1fr)}
+  .rail{position:static;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:0;border:0}
+  .rail h3{grid-column:1/-1;border-top:1.5px solid var(--ink)}
+  .rail button{border-right:1px solid var(--hair)}
+  .foot .cols{grid-template-columns:1fr 1fr}
+  .q .l,.q .r{grid-column:1/-1}
+}
+@media(max-width:760px){
+  .nav{display:none}
+  .head .shell{gap:10px}
+  .plate .nm span{display:none}
+  .plate .nm{padding:7px 10px}
+  .act{margin-left:auto;padding:8px 12px;font-size:11px}
+  .ticks{height:60px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+  .item .ph img{height:100px}
+  .band .lb{font-size:9.5px}
+}
+.pv{background:var(--petrol);color:#CFEAEC;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:6px}
+</style>
+</head>
+<body>
+
+<div class="pv">Bản duyệt giao diện v2 — hướng “thước đo” · maymaikimloai.com</div>
+
+<div class="top"><div class="shell">
+  <span>KT: <b>0909 000 000</b> · Báo giá trong 2 giờ làm việc · Xuất hoá đơn VAT</span>
+  <span>Dynabrade · Made in USA · Bảo hành 12 tháng</span>
+</div></div>
+
+<header class="head"><div class="shell">
+  <a class="plate" href="#">
+    <span class="sq"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.2"/><path d="M12 4v2.6M12 17.4V20M4 12h2.6M17.4 12H20"/></svg></span>
+    <span class="nm"><b>Máy mài kim loại</b><span>DỤNG CỤ KHÍ NÉN CÔNG NGHIỆP</span></span>
+  </a>
+  <nav class="nav">
+    <a href="#catalog" class="on">Catalog</a>
+    <a href="#datasheet">Thông số</a>
+    <a href="#chon">Cách chọn</a>
+    <a href="#baogia">Báo giá</a>
+  </nav>
+  <a class="act" href="#baogia">Nhận báo giá</a>
+</div></header>
+
+<!-- ============ HERO = THE INSTRUMENT ============ -->
+<section class="hero">
+  <div class="shell">
+    <div class="intro">
+      <div>
+        <span class="kicker">Catalog Dynabrade · 703 model có thông số vòng quay</span>
+        <h1>Máy mài<br>kim loại<span class="sub">chọn theo dải vòng quay</span></h1>
+      </div>
+      <p>Mỗi việc gia công nằm ở một điểm trên thang tốc độ: phá ba via đường hàn thép ở <b>6.000 vòng/phút</b>, sửa khuôn bằng mũi mài 3&nbsp;mm ở <b>60.000 vòng/phút</b>. Kéo hai đầu thước để xem những model chạy đúng dải bạn cần.</p>
+    </div>
+  </div>
+
+  <div class="shell rule">
+    <div class="cap">
+      <h2>Thước vòng quay · vòng/phút · thang loga</h2>
+      <span class="readout m"><i id="ro">450 – 100.000</i> <em>RPM</em> · <i id="rn">703</i> <em>MODEL</em></span>
+    </div>
+
+    <div class="instrument">
+      <div class="ticks" id="ticks"></div>
+      <div class="scale" id="scale"></div>
+      <div class="track" id="track">
+        <span class="bar"></span><span class="sel" id="sel"></span>
+        <input type="range" id="lo" min="0" max="1000" value="0" step="1" aria-label="Vòng quay tối thiểu">
+        <input type="range" id="hi" min="0" max="1000" value="1000" step="1" aria-label="Vòng quay tối đa">
+      </div>
+      <div class="bands" id="bands"></div>
+      <p class="hint">Mỗi vạch là một model — vạch càng cao, công suất càng lớn. Dải bên dưới cho thấy từng nhóm máy nằm ở vùng tốc độ nào; bấm vào dải để lọc.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATALOG ============ -->
+<section class="cat" id="catalog"><div class="shell">
+  <aside class="rail" id="rail"><h3>Nhóm máy</h3></aside>
+  <div>
+    <div class="gridhead">
+      <h2 id="gh">Toàn bộ catalog</h2>
+      <span class="n m" id="gn"></span>
+      <div class="sortbar" role="group" aria-label="Sắp xếp">
+        <button data-sort="rpm" class="on">Vòng quay</button>
+        <button data-sort="hp">Công suất</button>
+        <button data-sort="price">Giá</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <button class="more" id="more" hidden>Xem thêm model</button>
+  </div>
+</div></section>
+
+<!-- ============ DATA SHEET ============ -->
+<section class="sheet" id="datasheet"><div class="shell">
+  <div>
+    <span class="kicker">Trang chi tiết sản phẩm</span>
+    <h2>Mỗi model một<br>tờ thông số</h2>
+    <p>860 model đều có trang riêng: ảnh thật, bảng thông số đầy đủ đã dịch, và các model cùng dải tốc độ để đối chiếu.</p>
+    <div class="shot">
+      <span class="tagref">REF 53280</span>
+      <img src="/wp-content/uploads/dynabrade-images/4072326404-53280.jpg" alt="Máy mài đá lõm tâm góc vuông 7 inch Dynabrade Rebel 53280">
+    </div>
+  </div>
+  <div>
+    <table class="dt">
+      <caption>Máy mài đá lõm tâm góc vuông 7" (180 mm) — dòng Rebel</caption>
+      <tbody>
+        <tr class="key"><th>Vòng quay tối đa</th><td>8.500 RPM</td></tr>
+        <tr class="key"><th>Công suất</th><td>2.8 hp — 2.088 W</td></tr>
+        <tr><th>Kiểu máy</th><td>Góc vuông (Right Angle)</td></tr>
+        <tr><th>Dòng sản phẩm</th><td>Rebel</td></tr>
+        <tr><th>Lưu lượng khí tối đa</th><td>115 SCFM — 4.406 LPM</td></tr>
+        <tr><th>Ren đầu nối khí</th><td>1/2" NPT</td></tr>
+        <tr><th>Đường kính trong ống khí</th><td>1/2" (13 mm)</td></tr>
+        <tr><th>Kiểu xả khí</th><td>Điều chỉnh được</td></tr>
+        <tr><th>Chiều dài</th><td>340 mm — 13.4 in</td></tr>
+        <tr><th>Chiều cao</th><td>107 mm — 4.2 in</td></tr>
+        <tr><th>Khối lượng</th><td>3,31 kg — 7.3 lb</td></tr>
+        <tr><th>Loại hút bụi</th><td>Không hút bụi</td></tr>
+        <tr class="key"><th>Giá catalog</th><td>$2.070</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Giá niêm yết USD theo catalog Dynabrade, chưa gồm VAT và chi phí nhập khẩu.</p>
+  </div>
+</div></section>
+
+<!-- ============ EDITORIAL / SEO ============ -->
+<section class="ed" id="chon"><div class="shell">
+  <div>
+    <span class="kicker">Cẩm nang chọn máy</span>
+    <h2>Chọn máy mài kim loại theo việc, không theo tên</h2>
+    <p class="lede">Cùng gọi là “máy mài kim loại” nhưng máy phá đường hàn và máy sửa khuôn khác nhau tới mười lần về vòng quay. Bốn câu hỏi dưới đây quyết định model bạn cần.</p>
+  </div>
+  <article>
+    <div>
+      <h3><span>Vật liệu</span>Thép, inox hay nhôm?</h3>
+      <p>Inox sinh nhiệt nhanh nên cần vòng quay thấp hơn thép các-bon ở cùng đường kính đá, kèm đá mài chuyên dụng để tránh cháy và biến màu bề mặt. Nhôm bám dính đá, thường đi với băng nhám hoặc đĩa nhám thay vì đá mài cứng.</p>
+    </div>
+    <div>
+      <h3><span>Đường kính đá</span>Đá càng lớn, vòng quay càng thấp</h3>
+      <p>Tốc độ vòng ngoài của đá mới là thứ giới hạn, không phải RPM. Đá 100–125 mm chạy 10.000–12.000 vòng/phút; đá 180 mm chỉ còn 8.500; mũi mài hợp kim 3 mm trên máy mài bút chạy tới 60.000–100.000. Lắp đá lớn lên máy tốc độ cao là nguyên nhân vỡ đá phổ biến nhất.</p>
+    </div>
+    <div>
+      <h3><span>Không gian</span>Máy thẳng, góc vuông hay cần nối dài?</h3>
+      <p>Máy mài thẳng vào được lỗ và rãnh; máy góc vuông áp sát mặt phẳng và đường hàn góc; loại cần nối dài với tới đáy bồn, khung gầm, kết cấu hộp. Kiểu thân máy quyết định tư thế người thợ nhiều hơn công suất.</p>
+    </div>
+    <div>
+      <h3><span>Khí nén</span>Máy 3 hp cần 115 SCFM</h3>
+      <p>Máy càng mạnh càng ăn khí. Một máy mài 7" tiêu thụ 115 SCFM ở 6,2 bar — nếu máy nén không đủ, máy sẽ tụt vòng và mài chậm hơn cả máy nhỏ. Kiểm tra lưu lượng máy nén và đường kính ống trước khi chọn công suất.</p>
+    </div>
+  </article>
+</div></section>
+
+<!-- ============ QUOTE ============ -->
+<section class="q" id="baogia"><div class="shell">
+  <div class="l">
+    <span class="kicker">Miễn phí</span>
+    <h2>Gửi chi tiết gia công,<br>nhận đúng model</h2>
+    <p>Mô tả vật liệu và công đoạn, kỹ sư sẽ chọn model kèm bảng thông số và đá mài phù hợp.</p>
+    <ul>
+      <li>Báo giá trong 2 giờ làm việc</li>
+      <li>Hàng chính hãng, đủ CO/CQ</li>
+      <li>Hoá đơn VAT, hợp đồng công ty</li>
+      <li>Demo tại xưởng trước khi mua</li>
+    </ul>
+  </div>
+  <div class="r">
+    <div class="fld"><label for="f1">Họ tên</label><input id="f1" placeholder="Nguyễn Văn A"></div>
+    <div class="fld"><label for="f2">Điện thoại hoặc Zalo</label><input id="f2" placeholder="09xx xxx xxx"></div>
+    <div class="fld"><label for="f3">Nhóm máy quan tâm</label>
+      <select id="f3"><option>Chưa rõ — cần tư vấn</option><option>Máy mài góc khí nén</option><option>Máy mài đĩa &amp; cắt</option><option>Máy mài bút</option><option>Máy mài băng nhám</option><option>Máy chà nhám</option></select></div>
+    <div class="fld"><label for="f4">Việc cần làm</label><textarea id="f4" placeholder="Ví dụ: phá ba via đường hàn inox 304, dày 6 mm, 200 chi tiết/ca"></textarea></div>
+    <button class="act">Gửi yêu cầu báo giá</button>
+  </div>
+</div></section>
+
+<footer class="foot"><div class="shell">
+  <div class="cols">
+    <div>
+      <h5>Máy mài kim loại</h5>
+      <p style="margin:0">Máy mài kim loại khí nén công nghiệp Dynabrade — Made in USA. Tư vấn kỹ thuật, demo tại xưởng, bảo hành chính hãng.</p>
+      <a class="tel" href="tel:0909000000">0909 000 000</a>
+    </div>
+    <div><h5>Nhóm máy</h5><a href="#">Máy mài góc khí nén</a><a href="#">Máy mài đĩa &amp; cắt</a><a href="#">Máy mài bút</a><a href="#">Máy mài băng nhám</a><a href="#">Máy chà nhám</a><a href="#">Máy khoan khí nén</a></div>
+    <div><h5>Theo việc</h5><a href="#">Mài kim loại</a><a href="#">Cắt kim loại</a><a href="#">Đánh ba via</a><a href="#">Chà nhám</a><a href="#">Đánh bóng inox</a></div>
+    <div><h5>Hỗ trợ</h5><a href="#">Bảng giá</a><a href="#">Cách chọn máy</a><a href="#">Bảo hành</a><a href="#">Giao hàng</a><a href="#">Liên hệ</a></div>
+  </div>
+  <div class="legal">
+    <span>© 2026 maymaikimloai.com</span>
+    <span>Dynabrade là thương hiệu của Dynabrade Inc. (USA)</span>
+  </div>
+</div></footer>
+
+<script src="/preview-data.js"></script>
+<script>
+(function(){
+  var D = window.CATALOG || [];
+  var LO = 450, HI = 100000, lnLO = Math.log(LO), lnSPAN = Math.log(HI) - lnLO;
+  var pos = function(v){ return (Math.log(Math.max(LO,Math.min(HI,v))) - lnLO) / lnSPAN; };
+  var val = function(p){ return Math.exp(lnLO + p * lnSPAN); };
+  var vn  = function(n){ return Math.round(n).toLocaleString('vi-VN'); };
+  /* thước đọc theo nấc tròn, giống nấc khắc trên vỏ máy */
+  var snap = function(v){
+    if (v <= 1000)  return Math.round(v / 50) * 50;
+    if (v <= 10000) return Math.round(v / 100) * 100;
+    if (v <= 30000) return Math.round(v / 500) * 500;
+    return Math.round(v / 1000) * 1000;
+  };
+  /* thước đọc theo nấc tròn, để con số hiện ra giống nấc trên vỏ máy */
+  var snap = function(v){
+    if (v <= 1000) return Math.round(v / 50) * 50;
+    if (v <= 10000) return Math.round(v / 100) * 100;
+    if (v <= 30000) return Math.round(v / 500) * 500;
+    return Math.round(v / 1000) * 1000;
+  };
+
+  var $ = function(id){ return document.getElementById(id); };
+  var state = { lo: 0, hi: 1, cat: null, sort: 'rpm', shown: 24 };
+
+  /* ---- groups, ordered by where they sit on the scale ---- */
+  var groups = {};
+  D.forEach(function(d){
+    var g = groups[d.c] || (groups[d.c] = { key: d.c, label: d.cl, n: 0, min: Infinity, max: 0 });
+    g.n++; g.min = Math.min(g.min, d.rpm); g.max = Math.max(g.max, d.rpm);
+  });
+  var GS = Object.values(groups).sort(function(a,b){ return a.min - b.min; });
+
+  /* ---- ruler ticks: one hairline per model ---- */
+  var ticks = $('ticks'), frag = document.createDocumentFragment();
+  D.forEach(function(d, i){
+    var t = document.createElement('span');
+    t.className = 't'; t.dataset.ref = d.r;
+    t.style.left = (pos(d.rpm) * 100) + '%';
+    t.style.height = (26 + (d.hp ? Math.min(d.hp, 3) / 3 * 58 : 10)) + '%';
+    t.style.animationDelay = (i * 0.6) + 'ms';
+    frag.appendChild(t);
+  });
+  ticks.appendChild(frag);
+  var TICKS = Array.prototype.slice.call(ticks.children);
+
+  /* ---- scale labels ---- */
+  [500, 1000, 2000, 5000, 10000, 20000, 50000, 100000].forEach(function(v){
+    var s = document.createElement('span');
+    s.style.left = (pos(v) * 100) + '%';
+    s.textContent = v >= 1000 ? (v / 1000) + 'K' : v;
+    $('scale').appendChild(s);
+  });
+
+  /* ---- category bands ---- */
+  GS.forEach(function(g){
+    var b = document.createElement('div');
+    b.className = 'band'; b.dataset.cat = g.key;
+    b.setAttribute('role', 'button'); b.tabIndex = 0;
+    b.setAttribute('aria-label', 'Lọc ' + g.label);
+    var a = pos(g.min) * 100, z = pos(g.max) * 100;
+    b.innerHTML = '<span class="fill" style="left:' + a + '%;width:' + Math.max(z - a, 0.6) + '%"></span>' +
+                  '<span class="lb" style="left:' + a + '%">' + g.label + ' · ' + g.n + '</span>';
+    var pick = function(){ state.cat = (state.cat === g.key ? null : g.key); state.shown = 24; render(); };
+    b.addEventListener('click', pick);
+    b.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+    $('bands').appendChild(b);
+  });
+
+  /* ---- index rail ---- */
+  var rail = $('rail');
+  GS.forEach(function(g){
+    var btn = document.createElement('button');
+    btn.dataset.cat = g.key;
+    btn.innerHTML = '<span class="l">' + g.label + '</span><span class="c">' + g.n + ' model · ' + vn(g.min) + '–' + vn(g.max) + ' RPM</span>';
+    btn.addEventListener('click', function(){ state.cat = (state.cat === g.key ? null : g.key); state.shown = 24; render(); });
+    rail.appendChild(btn);
+  });
+
+  /* ---- sort ---- */
+  Array.prototype.forEach.call(document.querySelectorAll('.sortbar button'), function(b){
+    b.addEventListener('click', function(){ state.sort = b.dataset.sort; state.shown = 24; render(); });
+  });
+  $('more').addEventListener('click', function(){ state.shown += 24; render(); });
+
+  /* ---- range inputs ---- */
+  var lo = $('lo'), hi = $('hi');
+  function readRange(){
+    var a = +lo.value, z = +hi.value;
+    if (a > z) { var t = a; a = z; z = t; }
+    state.lo = a / 1000; state.hi = z / 1000;
+    state.shown = 24;
+    render();
+  }
+  lo.addEventListener('input', readRange);
+  hi.addEventListener('input', readRange);
+
+  /* ---- render ---- */
+  function render(){
+    var a = snap(val(state.lo)), z = snap(val(state.hi));
+    if (state.lo === 0) a = 450;
+    if (state.hi === 1) z = 100000;
+    var list = D.filter(function(d){
+      return d.rpm >= a - 1 && d.rpm <= z + 1 && (!state.cat || d.c === state.cat);
+    });
+    list.sort(function(p, q){
+      if (state.sort === 'price') return q.p - p.p;
+      if (state.sort === 'hp') return (q.hp || 0) - (p.hp || 0);
+      return p.rpm - q.rpm;
+    });
+
+    $('ro').textContent = vn(a) + ' – ' + vn(z);
+    $('rn').textContent = list.length;
+    $('sel').style.left = (state.lo * 100) + '%';
+    $('sel').style.width = ((state.hi - state.lo) * 100) + '%';
+
+    var keep = {};
+    list.forEach(function(d){ keep[d.r] = 1; });
+    TICKS.forEach(function(t){ t.classList.toggle('in', !!keep[t.dataset.ref]); });
+
+    Array.prototype.forEach.call(rail.querySelectorAll('button'), function(b){
+      b.classList.toggle('on', b.dataset.cat === state.cat);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.band'), function(b){
+      b.classList.toggle('on', b.dataset.cat === state.cat);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.sortbar button'), function(b){
+      b.classList.toggle('on', b.dataset.sort === state.sort);
+    });
+
+    var g = state.cat ? groups[state.cat] : null;
+    $('gh').textContent = g ? g.label : 'Toàn bộ catalog';
+    $('gn').textContent = list.length + ' model · ' + vn(a) + '–' + vn(z) + ' RPM';
+
+    var grid = $('grid');
+    if (!list.length){
+      grid.innerHTML = '<div class="empty" style="grid-column:1/-1"><b>Không có model nào trong dải này</b>Nới rộng thước vòng quay, hoặc bỏ chọn nhóm máy để xem lại toàn bộ catalog.</div>';
+      $('more').hidden = true;
+      return;
+    }
+    grid.innerHTML = list.slice(0, state.shown).map(function(d){
+      var spec = vn(d.rpm) + ' RPM' + (d.hp ? ' · ' + String(d.hp).replace('.', ',') + ' hp' : '') + (d.w ? ' · ' + d.w.replace('.', ',') : '');
+      return '<a class="item" href="#datasheet" data-ref="' + d.r + '">' +
+        '<span class="ph"><span class="ref">' + d.r + '</span><img loading="lazy" src="' + d.img + '" alt="' + d.n.replace(/"/g, '&quot;') + '"></span>' +
+        '<span class="bd"><span class="sc">' + (d.s || d.cl) + '</span>' +
+        '<h4>' + d.n + '</h4>' +
+        '<span class="sp">' + spec + '</span>' +
+        '<span class="ft"><span class="pr">$' + vn(d.p) + '</span><span class="lk">Thông số</span></span></span></a>';
+    }).join('');
+    $('more').hidden = list.length <= state.shown;
+    $('more').textContent = 'Xem thêm ' + Math.min(24, list.length - state.shown) + ' model';
+  }
+
+  /* ---- hover a card, light its tick on the ruler ---- */
+  $('grid').addEventListener('mouseover', function(e){
+    var it = e.target.closest('.item'); if (!it) return;
+    var t = ticks.querySelector('[data-ref="' + it.dataset.ref + '"]');
+    if (t) t.classList.add('hot');
+  });
+  $('grid').addEventListener('mouseout', function(e){
+    var it = e.target.closest('.item'); if (!it) return;
+    var t = ticks.querySelector('[data-ref="' + it.dataset.ref + '"]');
+    if (t) t.classList.remove('hot');
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

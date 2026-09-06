@@ -1,0 +1,23 @@
+{
+  "web3formsAccessKey": "59b6b1c8-f026-4011-afea-a77acb1f09e8",
+  "formSubject": "[maymaikimloai.com] Yêu cầu báo giá máy mài kim loại",
+  "company": {
+    "name": "Công ty Cổ phần Công nghiệp Nhất Quán",
+    "shortName": "Nhất Quán JSC",
+    "address": "10 Đường số 18A, Khu phố 5, Phường Bình Trưng (P. An Phú - Quận 2 cũ), TP.HCM",
+    "phones": [
+      "0908 050 415",
+      "0907 811 767",
+      "0383 236 067"
+    ],
+    "emails": [
+      "info@nhatquan.vn",
+      "hoai@nhatquan.vn"
+    ],
+    "website": "https://nhatquan.vn",
+    "hours": "Thứ 2 – Thứ 6: 08:00 – 17:00 · Thứ 7: 08:00 – 16:00",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d979.7461601342834!2d106.7065192!3d10.812487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528966f6241f5%3A0x1cf130b5f2b42bef!2zQ8O0bmcgdHkgTmjhuqV0IFF1w6Fu!5e0!3m2!1svi!2s!4v1623468233767!5m2!1svi!2s"
+  },
+  "logo": "/logo.png",
+  "logoAlt": "Máy Mài Kim Loại — dụng cụ khí nén công nghiệp"
+}
