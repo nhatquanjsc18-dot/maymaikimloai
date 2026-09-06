@@ -3,6 +3,7 @@ import { Exo, Public_Sans } from "next/font/google";
 import "./globals.css";
 import { Header, TopBar } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Analytics } from "@/components/Analytics";
 import { company, SITE_NAME, SITE_URL, absUrl } from "@/lib/site";
 
 const exo = Exo({
@@ -91,6 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

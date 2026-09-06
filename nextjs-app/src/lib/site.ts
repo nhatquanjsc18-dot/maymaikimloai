@@ -16,11 +16,13 @@ export type SiteConfig = {
   logo?: string;
   logoAlt?: string;
   formSubject: string;
+  analytics?: { googleId?: string };
   company: Company;
 };
 
 export const site = siteJson as SiteConfig;
 export const company = site.company;
+export const gaId = site.analytics?.googleId ?? "";
 
 /** Đổi tên miền ở đúng một dòng này — canonical, sitemap, JSON-LD tự theo. */
 export const SITE_URL = "https://maymaikimloai.nhatquan.vn";

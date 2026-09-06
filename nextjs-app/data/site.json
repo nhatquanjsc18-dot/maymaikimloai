@@ -19,5 +19,8 @@
     "mapEmbed": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d979.7461601342834!2d106.7065192!3d10.812487!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528966f6241f5%3A0x1cf130b5f2b42bef!2zQ8O0bmcgdHkgTmjhuqV0IFF1w6Fu!5e0!3m2!1svi!2s!4v1623468233767!5m2!1svi!2s"
   },
   "logo": "/logo.png",
-  "logoAlt": "Máy Mài Kim Loại — dụng cụ khí nén công nghiệp"
+  "logoAlt": "Máy Mài Kim Loại — dụng cụ khí nén công nghiệp",
+  "analytics": {
+    "googleId": "G-NJEQGPBCF8"
+  }
 }
