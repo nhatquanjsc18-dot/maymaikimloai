@@ -93,17 +93,40 @@ npm run build
 Kết quả nằm trong `nextjs-app/out/` (~185 MB, phần lớn là 866 ảnh sản phẩm).
 `out/` đã kèm sẵn `.htaccess` cấu hình nén, cache, ép HTTPS, bỏ `www` và trang lỗi 404.
 
-**Cách upload nhanh nhất:**
+### Site chạy trên tên miền phụ `maymaikimloai.nhatquan.vn`
+
+`nhatquan.vn` là site WordPress riêng — site này **không** đè lên nó, mà nằm ở thư mục gốc riêng
+của tên miền phụ.
+
+**Bước 1 — tạo tên miền phụ (chỉ làm một lần):**
+
+hPanel → **Domains → Subdomains** → tạo `maymaikimloai` dưới `nhatquan.vn`.
+Ghi lại **document root** hPanel hiển thị — thường là một trong hai:
+
+- `domains/maymaikimloai.nhatquan.vn/public_html` ← nên chọn kiểu này
+- `public_html/maymaikimloai`
+
+Nếu hPanel cho chọn, hãy đặt document root **ngoài** `public_html` của nhatquan.vn. Để bên trong
+vẫn chạy được, nhưng lỡ sau này sửa `.htaccess` của WordPress thì dễ ảnh hưởng lẫn nhau.
+
+Sau đó vào **SSL** bật chứng chỉ miễn phí cho tên miền phụ (`.htaccess` ép HTTPS, không có SSL
+site sẽ lặp chuyển hướng).
+
+**Bước 2 — upload:**
 
 1. Nén thư mục `out/` thành `out.zip`
-2. hPanel → **File Manager** → vào `public_html`
+2. hPanel → **File Manager** → vào **document root của tên miền phụ** (không phải `public_html` gốc)
 3. Upload `out.zip`, bấm **Extract** ngay trên máy chủ
-4. Chuyển toàn bộ file từ thư mục vừa giải nén ra thẳng `public_html`
-5. Kiểm tra `public_html/.htaccess` đã có (File Manager cần bật *Show hidden files*)
+4. Chuyển toàn bộ file từ thư mục vừa giải nén ra thẳng document root
+5. Bật *Show hidden files* để kiểm tra `.htaccess` đã có mặt
 
 Đừng upload từng file qua FTP — 6.000 file sẽ rất lâu.
 
-**Mỗi lần cập nhật nội dung:** chạy lại `npm run build`, nén `out/` và lặp lại các bước trên.
+**Mỗi lần cập nhật nội dung:** chạy lại `npm run build`, nén `out/` và lặp lại bước 2.
+
+**Sau khi lên sóng:** khai báo `https://maymaikimloai.nhatquan.vn/sitemap.xml` trong Google Search
+Console như một property riêng — tên miền phụ được Google xem gần như một site độc lập với
+`nhatquan.vn`.
 
 ---
 

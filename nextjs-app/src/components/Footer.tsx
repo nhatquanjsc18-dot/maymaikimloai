@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { company, telHref, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+import { company, telHref, SITE_NAME, SITE_TAGLINE, SITE_HOST } from "@/lib/site";
 import { getCategories } from "@/lib/data";
 import { Logo } from "./ui";
 import { logoSrc, logoAlt } from "@/lib/brand";
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
 
         <div className="legal">
-          <span>© {new Date().getFullYear()} maymaikimloai.com — {company.name}</span>
+          <span>© {new Date().getFullYear()} {SITE_HOST} — {company.name}</span>
           <span>Dynabrade là thương hiệu của Dynabrade Inc. (USA).</span>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { site } from "@/lib/site";
+import { site, SITE_HOST } from "@/lib/site";
 
 type Status = { kind: "ok" | "err"; msg: string } | null;
 
@@ -60,7 +60,7 @@ export default function ContactForm({ presetProduct }: { presetProduct?: string 
     <form className="form" onSubmit={onSubmit} action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value={accessKey} />
       <input type="hidden" name="subject" value={site.formSubject} />
-      <input type="hidden" name="from_name" value="maymaikimloai.com" />
+      <input type="hidden" name="from_name" value={SITE_HOST} />
       <input type="checkbox" name="botcheck" className="hp" tabIndex={-1} autoComplete="off" />
 
       <div className="fld">
