@@ -370,5 +370,5 @@ h1,h2,h3,h4,h5,h6{font-family:var(--title-font);color:var(--secondary);margin:0;
 @media(max-width:900px){ .pdp{grid-template-columns:minmax(0,1fr)} }
 
 /* logo ảnh (thả file vào public/logo.png là tự thay cho logo SVG mặc định) */
-.logoimg{height:46px;width:auto;object-fit:contain;flex-shrink:0;border-radius:var(--radius)}
-@media(max-width:680px){ .logoimg{height:38px} }
+.logoimg{height:40px;width:auto;object-fit:contain;flex-shrink:0}
+@media(max-width:680px){ .logoimg{height:34px} }
