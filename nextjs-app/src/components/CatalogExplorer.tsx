@@ -14,6 +14,14 @@ const pos = (v: number) => (Math.log(Math.max(LO, Math.min(HI, v))) - lnLO) / ln
 const val = (p: number) => Math.exp(lnLO + p * lnSPAN);
 const vn = (n: number) => Math.round(n).toLocaleString("vi-VN");
 
+/**
+ * Math.log/Math.exp có thể lệch nhau ở ULP cuối cùng giữa V8 phía Node (SSR)
+ * và V8 phía trình duyệt (hydrate) — cùng công thức, khác chuỗi số thực ra tới
+ * 17 chữ số. Làm tròn 4 chữ số thập phân (dư sức chính xác cho vị trí pixel)
+ * để chuỗi luôn khớp, tránh React coi là hydration mismatch và vẽ lại 703 vạch.
+ */
+const pct = (n: number) => n.toFixed(4) + "%";
+
 /** Làm tròn về nấc chẵn để con số đọc lên giống nấc khắc trên vỏ máy. */
 function snap(v: number) {
   if (v <= 1000) return Math.round(v / 50) * 50;
@@ -86,8 +94,8 @@ export default function CatalogExplorer({
               key={d.r + d.slug}
               className={"t" + (inSet.has(d.r) ? " in" : "") + (hot === d.r ? " hot" : "")}
               style={{
-                left: pos(d.rpm) * 100 + "%",
-                height: 28 + (d.hp ? Math.min(d.hp, 3) / 3 * 56 : 10) + "%",
+                left: pct(pos(d.rpm) * 100),
+                height: pct(28 + (d.hp ? Math.min(d.hp, 3) / 3 * 56 : 10)),
               }}
             />
           ))}
@@ -95,7 +103,7 @@ export default function CatalogExplorer({
 
         <div className="scale">
           {SCALE.map((v) => (
-            <span key={v} style={{ left: pos(v) * 100 + "%" }}>
+            <span key={v} style={{ left: pct(pos(v) * 100) }}>
               {v >= 1000 ? v / 1000 + "K" : v}
             </span>
           ))}
@@ -103,7 +111,7 @@ export default function CatalogExplorer({
 
         <div className="track">
           <span className="bar" />
-          <span className="sel" style={{ left: a0 * 100 + "%", width: (z0 - a0) * 100 + "%" }} />
+          <span className="sel" style={{ left: pct(a0 * 100), width: pct((z0 - a0) * 100) }} />
           <input
             type="range" min={0} max={1000} step={1} value={lo}
             aria-label="Vòng quay tối thiểu"

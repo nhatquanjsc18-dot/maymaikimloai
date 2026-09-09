@@ -264,6 +264,40 @@ h1,h2,h3,h4,h5,h6{font-family:var(--title-font);color:var(--secondary);margin:0;
 
 .pv{background:var(--secondary);color:var(--primary);font-family:var(--title-font);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px;border-bottom:1px solid rgba(255,94,20,.3)}
 
+/* ---------- nút gọi nổi ---------- */
+@keyframes fabPulse{
+  0%{transform:scale(1);opacity:.55}
+  70%{transform:scale(1.7);opacity:0}
+  100%{transform:scale(1.7);opacity:0}
+}
+.fab-call{
+  position:fixed;right:20px;bottom:20px;z-index:90;
+  display:flex;align-items:center;gap:10px;
+  background:var(--primary);color:#fff;
+  padding:14px;border-radius:999px;
+  box-shadow:0 10px 26px rgba(224,66,18,.42);
+  font-family:var(--title-font);font-weight:700;font-size:15px;letter-spacing:.3px;
+  transition:var(--tr),padding .25s ease;
+}
+.fab-call:hover{background:var(--secondary);transform:translateY(-2px);box-shadow:0 14px 30px rgba(14,18,29,.35)}
+.fab-call svg{width:24px;height:24px;flex-shrink:0;position:relative;z-index:1}
+.fab-call-ring{
+  position:absolute;inset:0;border-radius:999px;
+  background:var(--primary);
+  animation:fabPulse 2.2s cubic-bezier(.3,.6,.4,1) infinite;
+}
+.fab-call-text{
+  max-width:0;overflow:hidden;white-space:nowrap;
+  opacity:0;transition:max-width .25s ease,opacity .2s ease;
+}
+.fab-call:hover .fab-call-text,.fab-call:focus-visible .fab-call-text{
+  max-width:160px;opacity:1;
+}
+@media(max-width:680px){
+  .fab-call{right:16px;bottom:16px;padding:13px}
+  .fab-call svg{width:22px;height:22px}
+}
+
 /* ---------- reveal ---------- */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
 .rv.in{opacity:1;transform:none}
@@ -271,6 +305,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--title-font);color:var(--secondary);margin:0;
   html{scroll-behavior:auto}
   .rv{opacity:1;transform:none;transition:none}
   .marq .row{animation:none}
+  .fab-call-ring{animation:none}
   *{transition-duration:.01ms !important}
 }
 
